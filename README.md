@@ -1,7 +1,6 @@
 # spring-boot-docker-mysql
 Demo Spring Boot application running inside docker container linked with MySQL container.
 
-See my [blog post about it](https://github.com/jiwhiz/spring-boot-docker-mysql/wiki/home).
 
 ## How to run it with Docker
 Assume you already have Docker installed. See https://docs.docker.com/installation/.
@@ -28,7 +27,7 @@ docker logs demo-mysql
 Run demo application in Docker container and link to demo-mysql:
 
 ~~~
-docker run -p 8080:8080 --name demo-app --link demo-mysql:mysql -d jiwhiz/spring-boot-docker-mysql
+docker run -p 8080:8080 --name demo-app --link demo-mysql:mysql -d anudinaorg/spring-boot-docker-mysql
 ~~~
 
 You can check the log by
