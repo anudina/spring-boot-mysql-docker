@@ -16,7 +16,7 @@ mvn clean package docker:build
 Run MySQL 5.6 in Docker container:
 
 ~~~
-docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql:5.6
+docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql:5.7
 ~~~
 
 Check the log to make sure the server is running OK:
