@@ -2,6 +2,28 @@
 Demo Spring Boot application running inside docker container linked with MySQL container.
 
 
+Docker commands
+-----------------------------------------
+1. To pull an image from docker hub
+   docker pull <image-name> 
+   Eg: 
+	C:\Users\anudi\git\spring-boot-docker-mysql>docker pull anudinaorg/docker-mysql
+	Using default tag: latest
+	latest: Pulling from anudinaorg/docker-mysql
+	Digest: sha256:5e2ec5964847dd78c83410f228325a462a3bfd796b6133b2bdd590b71721fea6
+	Status: Image is up to date for anudinaorg/docker-mysql:latest
+2. To run a docker container
+   docker run --name docker-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -p 3333:3306 -d mysql:5.7
+   --name running instance name 
+   -p forward port where 3306 port has been forwareded to 3333
+3. do any change with container like adding tables or creating db etc
+4. commit the changes
+   docker commit 83dad1b4c6b4<Container-Id>
+5. push the image to hub
+    docker push anudinaorg/docker-mysql
+    
+
+
 ## How to run it with Docker
 Assume you already have Docker installed. See https://docs.docker.com/installation/.
 
